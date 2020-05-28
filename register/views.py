@@ -164,9 +164,8 @@ def get_related_text(request):
                 data_objects = Data.objects.all()
                 for data in data_objects:
                     cur_sentence = data.text
-                    for cur_text in cur_sentence.split():
-                        if cur_text[0] == text[-1]:
-                            all_related_texts.append(cur_text)
+                    if cur_sentence[0] == text[-1]:
+                        all_related_texts.append(cur_sentence)
             form = TextForm()
             return render(request, 'register/get_related_text.html', {
                 'form': form,
