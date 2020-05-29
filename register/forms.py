@@ -8,8 +8,8 @@ KANNADA_CATEGORY_CHOICES = [
 ]
 
 HINDI_CATEGORY_CHOICES = [
-    ('Text', 'ಪಠ್ಯ'), ('Audio', 'ಆಡಿಯೊ'), ('Image', 'ದ್ರುಶ್ಯ'), ('Video',
-                                                                 'ದ್ರುಶ್ಯಾವಳಿ')
+    ('Text', 'पाठ'), ('Audio', 'ऑडियो'), ('Image', 'छवि'), ('Video',
+                                                                 'वीडियो')
 ]
 
 CATEGORY_CHOICES = [
@@ -45,10 +45,10 @@ class KannadaDataForm(forms.Form):
 class HindiDataForm(forms.Form):
 
     text_id = forms.CharField(
-        max_length=50, label='&#3253;&#3262;&#3221;&#3277;&#3247; <br/>')
+        max_length=50, label='&#2346;&#2366;&#2336;&#2381; &#2310;&#2312;&#2337;&#2368; <br/>')
     text = forms.CharField(widget=forms.Textarea,
-                           label="&#3242;&#3232;&#3277;&#3247;")
-    category = forms.ChoiceField(label='&#3253;&#3248;&#3277;&#3223;',
+                           label="&#2346;&#2366;&#2336;&#2381;")
+    category = forms.ChoiceField(label='&#2357;&#2352;&#2381;&#2327;&#2381;',
                                  choices=HINDI_CATEGORY_CHOICES, widget=forms.RadioSelect)
     upload = forms.FileField(
-        label="&#3205;&#3242;&#3277;&#3250;&#3275;&#3233;&#3277;")
+        label="&#2337;&#2366;&#2354;&#2344;&#2366;")
